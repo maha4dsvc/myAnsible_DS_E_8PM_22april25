@@ -2,12 +2,12 @@
 - hosts: all
   become: yes
   tasks: 
-  - name: in task01, i want to  install git (apt-get install git)
+  - name: in task01, i want to  install git
     apt: 
       name: git
       state: present
 
-  - name: in task02, i want to install tree (apt-get install tree)
+  - name: in task02, i want to install tree 
     apt:
       name: tree
       state: present
