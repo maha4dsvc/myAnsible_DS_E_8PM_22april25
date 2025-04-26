@@ -8,5 +8,20 @@
       name: apache2
       state: present
 
+  - name: i want to create a folder 
+    file: 
+      path: /home/maha/myfolder
+      state: directory
+  - name:  i want copy a file into myfolder 
+    copy:
+      src: mystaticfile
+      dest: /home/maha/myfolder/mystaticfile
 
+  - name: i want to download internet file 
+    get_url:
+      url: https://updates.jenkins.io/download/war/2.507/jenkins.war
+      dest: /home/maha/myfolder/jenkins.war
+    force_basic_auth: yes
+
+     
      
